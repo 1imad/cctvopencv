@@ -3,10 +3,11 @@ const express   = require('express'),
       app       = express(),
       server    = require('http').Server(app),
       io        = require('socket.io')(server),
-      FPS       = 10,
-      wCap      = new cv.VideoCapture(0),
       path      = require('path');
-
+//accessing camera using openCV
+const wCap      = new cv.VideoCapture(0)
+      FPS       = 10,;
+//adj frame size
 wCap.set(cv.CAP_PROP_FRAME_WIDTH, 300)
 wCap.set(cv.CAP_PROP_FRAME_HEIGHT, 300)
 
